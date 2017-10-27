@@ -28,38 +28,19 @@ console.log("AWS Lambda SES Forwarder // @arithmetric // Version 4.2.0");
 //   To match a mailbox name on all domains, use a key without the "at" symbol
 //   and domain part of an email address (i.e. `info`).
 var defaultConfig = {
-  fromEmail: "support@star-name-registry.com",
+  fromEmail: "test@example.com",
   subjectPrefix: "",
-  emailBucket: "ses-stars",
+  emailBucket: "ses-test",
   emailKeyPrefix: "support/",
   forwardMapping: {
-    "support@star-name-registry.org": [
-      "support@star-name-registry.com"
-    ],
-    "support@star-name-registry.ca": [
-      "support@star-name-registry.com"
-    ],
-    "support@repertoire-des-etoiles.fr": [
-      "support@star-name-registry.com"
-    ],
-    "support@registrodenombresdeestrellas.es": [
-      "support@star-name-registry.com"
-    ],
-    "contacto@registrodenombresdeestrellas.es": [
-      "support@star-name-registry.com"
+    "test@example.com": [
+      "xx@test.com"
     ]
-    //"@example.com": [
-    //  "example.john@example.com"
-    //],
   }
 };
 
 var emailPrefixes = {
-    "support@star-name-registry.org": "US",
-    "support@star-name-registry.ca": "CA",
-    "support@repertoire-des-etoiles.fr": "FR",
-    "support@registrodenombresdeestrellas.es": "ES",
-    "contacto@registrodenombresdeestrellas.es": "ES"
+    "test@example.com": "US"
 };
 
 /**
